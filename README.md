@@ -108,7 +108,7 @@ is designed to be imported into any grid-based game or simulation beyond this pr
 
 Use of AI
 
-    -  AI (Gemini/ChatGPT) was utilized as a collaborative tool in the following areas:
+    -  AI was utilized as a collaborative tool in the following areas:
 
     - Refactoring: Optimizing the render_ascii function for better performance.
 
