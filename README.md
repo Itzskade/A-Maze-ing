@@ -12,7 +12,7 @@ The project features a modular architecture that separates the generation logic 
 # Instructions
 
 ## Prerequisites
-Python 3.10 or higher.
+Python 3.10 or higher.   
 pip (for dependency management).
 
 ## Execution
