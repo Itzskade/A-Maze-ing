@@ -15,10 +15,6 @@ The project features a modular architecture that separates the generation logic 
 Python 3.10 or higher.
 pip (for dependency management).
 
-## Installation
-Clone the repository.
-
-
 ## Execution
 You can run the project using the provided Makefile:
 
