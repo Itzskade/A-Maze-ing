@@ -92,8 +92,10 @@ Aesthetics:
 --- 
 
 # Reusable Code
+
 The core logic in maze_app/maze_types.py and maze_app/utils.py is strictly decoupled.  
 The Bitmask Wall System (using NORTH, SOUTH, EAST, WEST values) is designed to be imported into any grid-based game or simulation beyond this project.
+
 --- 
 
 # Resources
