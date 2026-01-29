@@ -76,7 +76,7 @@ Maze Generation Algorithm:
 
     - Randomized Prim's
 
-Why Prim's?
+## Why Prim's?
 
 Performance: 
 
