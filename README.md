@@ -108,11 +108,13 @@ is designed to be imported into any grid-based game or simulation beyond this pr
 
 ## Use of AI
 
-    - AI was utilized as a collaborative tool in the following areas:
+    - Refactoring: Optimized the render_ascii function to improve terminal refresh rates and handle complex bitmasking for walls and paths efficiently.
 
-    - Refactoring: Optimizing the render_ascii function for better performance.
+    - Algorithm Hardening (Debugging): Assisted in troubleshooting the "42" pattern protection logic, ensuring that the Randomized Prim's algorithm could flow around specific coordinates without breaking the visual integrity of the numbers.
 
-    - Debugging: Troubleshooting the "42" pattern protection logic within the Prim's algorithm loop.
+    - Solver Implementation: Guided the structural design of the BFS (Breadth-First Search) and DFS (Depth-First Search) solvers, focusing on the correct use of data structures (Queue vs. Stack) to ensure path reconstruction accuracy.
+
+    - Generator Logic: Provided insights into the bitwise operations used to manage wall states (NORTH, SOUTH, EAST, WEST), allowing for a highly modular and memory-efficient maze representation.
 
 ---
 
