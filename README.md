@@ -120,9 +120,6 @@ rmarin-n: System Architecture (Config Parser & Validation), modulation, added fe
 ## Planning and Evolution
 Planned: Linear development (Generator -> Solver -> Render).
 
-## Actual: 
-We moved to a modular approach earlier than expected because debugging the render was difficult without a stable generator. 
-The "42" pattern was added as a late-stage challenge.
 
 ## Retrospective
 What worked well: 
