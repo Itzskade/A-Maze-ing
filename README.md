@@ -1,0 +1,146 @@
+# A-Maze-ing
+_This project has been created as part of the 42 curriculum by rmarin-n, dmena-li._
+
+--- 
+# Description
+A-Maze-ing is a technical exploration into the world of graph theory and procedural generation.   
+The objective of this project is to create a robust system capable of generating "perfect" mazes (mazes where any two points are connected by exactly one path) and providing automated solutions.
+
+The project features a modular architecture that separates the generation logic from the visual rendering, allowing for easy expansion and testing of different mathematical approaches to maze construction.
+
+--- 
+# Instructions
+
+## Prerequisites
+Python 3.10 or higher.
+pip (for dependency management).
+
+## Installation
+Clone the repository.
+
+
+## Execution
+You can run the project using the provided Makefile:
+
+Using Makefile:   
+(This will automatically check requirements, install missing dependencies, and launch the application).
+```
+make run
+```
+
+To clean temporary files (__pycache__) and others:
+```
+make clean
+```
+--- 
+
+# Project Architecture & Configuration
+```
+|-- Makefile
+|-- a-maze-ing.py
+|-- config.txt
+|-- maze_app
+|   |-- generator
+|   |   |-- __init__.py
+|   |   |-- generator.py
+|   |   `-- pyproject.toml
+|   |-- maze_class.py
+|   |-- maze_types.py
+|   |-- render
+|   |   `-- render.py
+|   |-- solver
+|   |   |-- __init__.py
+|   |   `-- solver.py
+|   `-- utils.py
+|-- parse
+|   `-- config_parser.py
+|-- requirements.txt
+`-- validation
+    `-- config_model.py
+```
+
+## Configuration File Format
+The project uses a config.txt file located in the root directory. It follows a key-value pair format:
+```
+WIDTH=10
+HEIGHT=10
+ENTRY=0,0
+EXIT=9,9
+SEED=
+ALGORITHM='bfs' or 'dfs'
+OUTPUT_FILE=maze.txt
+PERFECT=false
+```
+Colors: Supports ANSI escape codes for terminal styling.
+--- 
+
+# Technical Decisions
+Maze Generation Algorithm: 
+
+    - Randomized Prim's
+
+Why Prim's?
+
+Uniformity: 
+
+    - Unlike Depth-First Search (DFS), which creates long, winding corridors, Prim’s produces a more "branching" and balanced maze.
+
+Performance: 
+
+    - It is highly efficient for grid-based graphs.
+
+Aesthetics: 
+
+    - It creates a maze that looks more natural and is harder to solve by simply following one direction.
+
+--- 
+
+# Reusable Code
+The core logic in maze_app/maze_types.py and maze_app/utils.py is strictly decoupled.  
+The Bitmask Wall System (using NORTH, SOUTH, EAST, WEST values) is designed to be imported into any grid-based game or simulation beyond this project.
+--- 
+
+# Resources
+Documentation: 
+
+    - Wikipedia - Maze Generation Algorithms.
+
+Tutorials:
+
+    - Jamis Buck’s "The Buckblog" for deep dives into Prim's vs. Kruskal's.
+
+Use of AI
+
+    -  AI (Gemini/ChatGPT) was utilized as a collaborative tool in the following areas:
+
+    - Refactoring: Optimizing the render_ascii function for better performance.
+
+    - Debugging: Troubleshooting the "42" pattern protection logic within the Prim's algorithm loop.
+
+
+# Team and Project Management
+## Roles
+dmena-li: Algorithm Implementation (Generator & Solver) and Rendering Engine.
+
+rmarin-n: System Architecture (Config Parser & Validation), modulation and added features.
+
+## Planning and Evolution
+Planned: Linear development (Generator -> Solver -> Render).
+
+## Actual: 
+We moved to a modular approach earlier than expected because debugging the render was difficult without a stable generator. 
+The "42" pattern was added as a late-stage challenge.
+
+## Retrospective
+What worked well: 
+The modular structure allowed us to work on the Solver and Generator simultaneously without merge conflicts.
+
+## Improvements: 
+Implementing a GUI using pygame instead of just ASCII would be the next logical step.
+
+## Tools Used
+    - Git/GitHub: Version control.
+
+    - Pydantic: For configuration validation.
+
+    - Makefile: For automation.
