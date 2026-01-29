@@ -71,7 +71,9 @@ ALGORITHM='bfs' or 'dfs'
 OUTPUT_FILE=maze.txt
 PERFECT=false
 ```
+
 Colors: Supports ANSI escape codes for terminal styling.
+
 --- 
 
 # Technical Decisions
