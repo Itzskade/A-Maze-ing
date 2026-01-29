@@ -81,10 +81,6 @@ Maze Generation Algorithm:
 
 Why Prim's?
 
-Uniformity: 
-
-    - Unlike Depth-First Search (DFS), which creates long, winding corridors, Prim’s produces a more "branching" and balanced maze.
-
 Performance: 
 
     - It is highly efficient for grid-based graphs.
