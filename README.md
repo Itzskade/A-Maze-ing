@@ -94,26 +94,29 @@ Aesthetics:
 # Reusable Code
 
 The core logic in maze_app/maze_types.py and maze_app/utils.py is strictly decoupled.  
-The Bitmask Wall System (using NORTH, SOUTH, EAST, WEST values) is designed to be imported into any grid-based game or simulation beyond this project.
+The Bitmask Wall System using:
+(NORTH, SOUTH, EAST, WEST values) 
+is designed to be imported into any grid-based game or simulation beyond this project.
 
 --- 
 
 # Resources
 Documentation: 
-
     - Wikipedia - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
 
 Tutorials:
+    - Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
 
-    - Jamis Buck’s "The Buckblog" for deep dives into Prim's vs. Kruskal's.
+## Use of AI
+AI  was utilized as a collaborative tool in the following areas:
 
-Use of AI
+    - Refactoring: Optimized the render_ascii function to improve terminal refresh rates and handle complex bitmasking for walls and paths efficiently.
 
-    -  AI (Gemini/ChatGPT) was utilized as a collaborative tool in the following areas:
+    - Algorithm Hardening (Debugging): Assisted in troubleshooting the "42" pattern protection logic, ensuring that the Randomized Prim's algorithm could flow around specific coordinates without breaking the visual integrity of the numbers.
 
-    - Refactoring: Optimizing the render_ascii function for better performance.
+     - Solver Implementation: Guided the structural design of the BFS (Breadth-First Search) and DFS (Depth-First Search) solvers, focusing on the correct use of data structures (Queue vs. Stack) to ensure path reconstruction accuracy.
 
-    - Debugging: Troubleshooting the "42" pattern protection logic within the Prim's algorithm loop.
+    - Generator Logic: Provided insights into the bitwise operations used to manage wall states (NORTH, SOUTH, EAST, WEST), allowing for a highly modular and memory-efficient maze representation.
 
 
 # Team and Project Management
