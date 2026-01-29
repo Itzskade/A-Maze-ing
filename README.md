@@ -106,7 +106,7 @@ is designed to be imported into any grid-based game or simulation beyond this pr
 - Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
 ---
 
-Use of AI
+## Use of AI
 
     - AI was utilized as a collaborative tool in the following areas:
 
