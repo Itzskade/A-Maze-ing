@@ -101,7 +101,7 @@ The Bitmask Wall System (using NORTH, SOUTH, EAST, WEST values) is designed to b
 # Resources
 Documentation: 
 
-    - Wikipedia - Maze Generation Algorithms.
+    - Wikipedia - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
 
 Tutorials:
 
