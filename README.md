@@ -117,7 +117,6 @@ Planned: Linear development (Generator -> Solver -> Render).
 
 
 ## Retrospective
-What worked well: 
 The modular structure allowed us to work on the Solver and Generator simultaneously without merge conflicts.
 
 ## Improvements: 
