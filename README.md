@@ -125,7 +125,7 @@ AI  was utilized as a collaborative tool in the following areas:
 ## Roles
 dmena-li: Algorithm Implementation (Generator & Solver) and Rendering Engine.
 
-rmarin-n: System Architecture (Config Parser & Validation), modulation and added features.
+rmarin-n: System Architecture (Config Parser & Validation), modulation, added features and readme.
 
 ## Planning and Evolution
 Planned: Linear development (Generator -> Solver -> Render).
