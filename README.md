@@ -103,11 +103,12 @@ is designed to be imported into any grid-based game or simulation beyond this pr
 --- 
 
 # Resources
-Documentation: 
-    - Wikipedia - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
+## Documentation:
 
-Tutorials:
-    - Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
+- Wikipedia - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
+
+## Tutorials:
+- Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
 ---
 
 # Team and Project Management
