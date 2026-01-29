@@ -23,7 +23,7 @@ You can run the project using the provided Makefile:
 make run
 ```
 
-To clean temporary files (__pycache__) and others:
+To clean temporary files (__pycache__), venv and others:
 ```
 make clean
 ```
