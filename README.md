@@ -1,5 +1,5 @@
 # A-Maze-ing
-_This project has been created as part of the 42 curriculum by rmarin-n, dmena-li._
+_This project has been created as part of the 42 curriculum by dmena-li, rmarin-n._
 
 --- 
 # Description
