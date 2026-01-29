@@ -18,7 +18,6 @@ pip (for dependency management).
 ## Execution
 You can run the project using the provided Makefile:
 
-Using Makefile:   
 (This will automatically check requirements, install missing dependencies, and launch the application).
 ```
 make run
