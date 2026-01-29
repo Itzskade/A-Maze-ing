@@ -106,6 +106,16 @@ is designed to be imported into any grid-based game or simulation beyond this pr
 - Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
 ---
 
+Use of AI
+
+    -  AI (Gemini/ChatGPT) was utilized as a collaborative tool in the following areas:
+
+    - Refactoring: Optimizing the render_ascii function for better performance.
+
+    - Debugging: Troubleshooting the "42" pattern protection logic within the Prim's algorithm loop.
+
+---
+
 # Team and Project Management
 ## Roles
 dmena-li: Algorithm Implementation (Generator & Solver) and Rendering Engine.
