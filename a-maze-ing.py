@@ -17,7 +17,7 @@ def main() -> None:
     Coordinates configuration loading, the main CLI loop,
     and state management (algorithms, solvers, and themes) for the maze.
     """
-    config_path = sys.argv[1] if len(sys.argv) > 1 else "config.txt"
+    config_path = "config.txt"
     try:
         raw_config = read_config(config_path)
         parsed_config = parse_config(raw_config)
@@ -256,3 +256,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
