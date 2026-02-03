@@ -138,6 +138,7 @@ Bitmask Reference
 ## Documentation:
 
 - Wikipedia - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
+- Earthly - [Python Makefile](https://earthly.dev/blog/python-makefile/)
 
 ## Tutorials:
 - Jamis Buck’s "The Buckblog" - [Maze Generation: Prim's Algorithm](https://weblog.jamisbuck.org/2011/1/10/maze-generation-prim-s-algorithm)
@@ -177,3 +178,4 @@ Implementing a GUI using pygame instead of just ASCII would be the next logical 
     - Pydantic: For configuration validation.
 
     - Makefile: For automation.
+
