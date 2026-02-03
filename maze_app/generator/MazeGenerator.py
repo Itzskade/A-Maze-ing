@@ -231,12 +231,12 @@ class MazeGenerator:
     def calculate_chance(self) -> float:
         area = self.width * self.height
         steps: List[Tuple[int, float]] = [
-            (9, 0.9),
-            (25, 0.7),
-            (45, 0.6),
-            (60, 0.5),
-            (90, 0.4),
-            (120, 0.3),
+            (9, 1.0),
+            (25, 0.8),
+            (45, 0.7),
+            (60, 0.6),
+            (90, 0.5),
+            (120, 0.4),
         ]
         for limit, probability in steps:
             if area < limit:
@@ -244,6 +244,7 @@ class MazeGenerator:
         return 0.1
 
     def _apply_imperfect_logic(self, chance: float) -> "MazeGenerator":
+        walls_broken = 0
         for y in range(1, self.height - 1):
             for x in range(1, self.width - 2):
                 if (y, x) in self.pattern42_coords or (
@@ -251,12 +252,25 @@ class MazeGenerator:
                     x + 1,
                 ) in self.pattern42_coords:
                     continue
-                if random.random() < chance and (self.grid[y][x] & Wall.EAST):
+                if random.random() < chance and (
+                    self.grid[y][x] & Wall.EAST.value
+                ):
                     if (
                         self._get_neighbor_bits(y, x) != 2
                         and self._get_neighbor_bits(y, x, 1) != 8
                     ):
                         self._connect_cells(y, x, Wall.EAST)
+                        walls_broken += 1
+        if walls_broken == 0:
+            possible = []
+            for y in range(self.height):
+                for x in range(self.width):
+                    for d in list(Wall):
+                        possible.append((y, x, d))
+            random.shuffle(possible)
+            for y, x, d in possible:
+                if self._connect_cells(y, x, d):
+                    break
         return self
 
     def _write_42(self, visited: Set[Tuple[int, int]]) -> None:

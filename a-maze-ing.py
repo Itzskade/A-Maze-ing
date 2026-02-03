@@ -14,8 +14,9 @@ from maze_app.themes import classic_theme, dark_theme, neon_theme
 
 def main() -> None:
     """
-    Coordinates configuration loading, the main CLI loop,
-    and state management (algorithms, solvers, and themes) for the maze.
+    Main entry point for the maze application.
+    Loads configuration, initializes the maze engine,
+    and runs the interactive menu for generation, solving, and rendering.
     """
     config_path = "config.txt"
     try:
@@ -247,10 +248,10 @@ def main() -> None:
     finally:
         os.system("clear")
         print()
-        print(f"{pink}=" * 20)
-        print("     Goodbye!")
-        print("Thanks for trying me")
-        print("=" * 20 + reset)
+        print(f"{pink}=" * 21)
+        print("      Goodbye!")
+        print("Thanks for testing me")
+        print("=" * 21 + reset)
         print()
 
 

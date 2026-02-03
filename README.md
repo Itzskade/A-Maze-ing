@@ -90,9 +90,11 @@ Aesthetics:
 
 ## Why Dfs?
 Aesthetics:
+
     -  Creates long, winding corridors with fewer dead ends, resulting in a "deep" maze feel.
 
-Complexity: 
+Complexity:
+
     - Highly efficient using a Stack (LIFO), making it ideal for large grids where recursion depth isn't an issue.
 
 --- 
@@ -102,19 +104,22 @@ Maze Solving Algorithm:
     - DFS
 
 ## Why BFS?
-Optimality: 
+Optimality:
+
     - Guaranteed to find the shortest path in an unweighted grid.
 
-Visuals: 
+Visuals:
+
     - Excellent for demonstrating "flood-fill" exploration.
 
 ## Why DFS?
-Memory Efficiency: 
+Memory Efficiency:
+
     - Uses less memory than BFS as it only stores the current path, not the entire frontier.
 
-Speed: 
-    - Often finds a solution faster than BFS by diving deep into branches, even if it’s not the shortest one.
+Speed:
 
+    - Often finds a solution faster than BFS by diving deep into branches, even if it’s not the shortest one.
 
 # Reusable Code
 
@@ -160,11 +165,10 @@ Bitmask Reference
 ## Roles
 dmena-li: Algorithm Implementation (Generator & Solver) and Rendering Engine.
 
-rmarin-n: System Architecture (Config Parser & Validation), modulation, added features and readme.
+rmarin-n: Architecture, config system, Maze coordination, main logic, features, and README.
 
 ## Planning and Evolution
 Planned: Linear development (Generator -> Solver -> Render).
-
 
 ## Retrospective
 The modular structure allowed us to work on the Solver and Generator simultaneously without merge conflicts.
@@ -178,4 +182,3 @@ Implementing a GUI using pygame instead of just ASCII would be the next logical 
     - Pydantic: For configuration validation.
 
     - Makefile: For automation.
-
