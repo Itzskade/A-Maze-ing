@@ -28,4 +28,3 @@ class Maze:
             themes=self.themes,
             name_file=self.file_name,
         )
-
