@@ -30,9 +30,7 @@ class MazeGenerator:
         self.seed = seed
         self.algorithm = algorithm
         self.solver = solver
-        self.grid: List[List[int]] = [
-            [15 for _ in range(width)] for _ in range(height)
-        ]
+        self.grid: List[List[int]] = []
         self.pattern42_coords: Set[Tuple[int, int]] = set()
 
     def generate(self) -> List[List[int]]:
@@ -112,13 +110,6 @@ class MazeGenerator:
         if output_type == "way":
             return path if path is not None else []
         return self.print_coordinates(path) if path else ""
-
-    def get_maze_structure(self) -> List[List[int]]:
-        return self.grid
-
-    def swap_generate(self, algorithm: str) -> "MazeGenerator":
-        self.algorithm = algorithm
-        return self
 
     def dfs_solution(self) -> Optional[List[Tuple[int, int]]]:
         way = self.entry
@@ -315,3 +306,4 @@ class MazeGenerator:
                     self.pattern42_coords.add((f, c))
                     visited.add((f, c))
                 return
+
