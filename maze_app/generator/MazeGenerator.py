@@ -34,8 +34,9 @@ class MazeGenerator:
         """Initialize maze parameters and configuration."""
         self.height = height
         self.width = width
-        self.entry = entry
-        self.exit = exit_
+        ent, ext  = self._fixes(entry, exit_)
+        self.entry = ent
+        self.exit = ext
         self.perfect = perfect
         self.seed = seed
         self.algorithm = algorithm
@@ -309,6 +310,15 @@ class MazeGenerator:
                     break
         return self
 
+    def _fixes(
+        self, entry: Tuple[int, int], exit_: Tuple[int, int]
+    ) -> List[Tuple[int, int]]:
+        ex, ey = entry
+        final_entry = ey, ex
+        xx, xy = exit_
+        final_exit = xy, xx
+        return [final_entry, final_exit]
+
     def _write_42(self, visited: Set[Tuple[int, int]]) -> None:
         """Hardcodes a '42' pattern into the center of the maze grid."""
         start_f, start_c = (self.height // 2) - 2, (self.width // 2) - 3
@@ -357,3 +367,4 @@ class MazeGenerator:
                     self.pattern42_coords.add((f, c))
                     visited.add((f, c))
                 return
+
