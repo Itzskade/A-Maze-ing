@@ -91,7 +91,7 @@ def main() -> None:
     )
 
     show_path = False
-    paths: Dict[str, Optional[Union[List[Tuple[int, int]], str]]] = {
+    paths: Dict[str, Optional[Union[List[Tuple[int, int]]]] = {
         "bfs": None,
         "dfs": None,
     }
