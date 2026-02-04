@@ -11,7 +11,7 @@ except ModuleNotFoundError:
                      "Run: make install\n\033[0m")
     sys.exit(1)
 
-from typing import List, Tuple, Optional, Dict, Union
+from typing import List, Tuple, Optional, Dict
 from maze_app.generator.MazeGenerator import MazeGenerator
 from parse.config_parser import read_config, parse_config
 from parse.config_model import MazeConfig
@@ -91,7 +91,7 @@ def main() -> None:
     )
 
     show_path = False
-    paths: Dict[str, Optional[Union[List[Tuple[int, int]]]] = {
+    paths: Dict[str, Optional[List[Tuple[int, int]]]] = {
         "bfs": None,
         "dfs": None,
     }
