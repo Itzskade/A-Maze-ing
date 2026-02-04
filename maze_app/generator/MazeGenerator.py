@@ -34,7 +34,7 @@ class MazeGenerator:
         """Initialize maze parameters and configuration."""
         self.height = height
         self.width = width
-        ent, ext  = self._fixes(entry, exit_)
+        ent, ext = self._fixes(entry, exit_)
         self.entry = ent
         self.exit = ext
         self.perfect = perfect
@@ -367,3 +367,4 @@ class MazeGenerator:
                     self.pattern42_coords.add((f, c))
                     visited.add((f, c))
                 return
+
