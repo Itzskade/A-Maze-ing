@@ -117,10 +117,7 @@ def main() -> None:
             print("5. Change color theme")
             print("6. Exit", reset)
 
-            try:
-                choice = input(f"\n{brown}Select an option: {reset}").strip()
-            except EOFError:
-                break
+            choice = input(f"\n{brown}Select an option: {reset}").strip()
 
             if choice == "1":
                 os.system("clear")
@@ -254,7 +251,7 @@ def main() -> None:
                 os.system("clear")
                 maze.render(show_path)
                 print(f"\n{red}Invalid option. Try again.{reset}")
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, EOFError):
         pass
     finally:
         os.system("clear")
@@ -268,3 +265,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
