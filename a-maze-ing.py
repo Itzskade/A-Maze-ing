@@ -3,14 +3,6 @@
 import sys
 import random
 import os
-
-try:
-    from pydantic import ValidationError
-except ModuleNotFoundError:
-    sys.stderr.write("\033[91mError: Pydantic not installed yet.\n"
-                     "Run: make install\n\033[0m")
-    sys.exit(1)
-
 from typing import List, Tuple, Dict, Optional, Union
 from maze_app.generator.MazeGenerator import MazeGenerator
 from parse.config_parser import read_config, parse_config
@@ -45,12 +37,6 @@ def main() -> None:
         algorithm = config.algorithm
         solver = config.solver
         os.system("clear")
-
-    except ValidationError as e:
-        for error in e.errors():
-            clean = error["msg"][13:]
-            sys.stderr.write(f"Config error: {clean} ")
-        sys.exit(1)
 
     except ValueError as e:
         sys.stderr.write(f"Error: {e} ")

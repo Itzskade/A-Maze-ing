@@ -32,28 +32,33 @@ make clean
 
 # Project Architecture & Configuration
 ```
-|-- Makefile
-|-- a-maze-ing.py
-|-- config.txt
-|-- maze_app
-|   |-- generator
-|   |   |-- __init__.py
-|   |   |-- generator.py
-|   |   `-- pyproject.toml
-|   |-- maze_class.py
-|   |-- maze_types.py
-|   |-- render
-|   |   `-- render.py
-|   |-- solver
-|   |   |-- __init__.py
-|   |   `-- solver.py
-|   `-- utils.py
-|-- parse
-|   `-- config_parser.py
-|-- requirements.txt
-`-- validation
-    `-- config_model.py
-```
+├── a-maze-ing.py
+├── config.txt
+├── __init__.py
+├── Makefile
+├── maze_app
+│   ├── generator
+│   │   ├── __init__.py
+│   │   ├── MazeGenerator.py
+│   │   ├── pyproject.toml
+│   │   └── README.md
+│   ├── __init__.py
+│   ├── maze.py
+│   ├── output
+│   │   ├── file_maze.py
+│   │   └── __init__.py
+│   ├── render
+│   │   ├── __init__.py
+│   │   └── render.py
+│   └── themes.py
+├── parse
+│   ├── config_model.py
+│   ├── config_parser.py
+│   └── __init__.py
+├── README.md
+└── requirements.txt
+
+ ```
 
 ## Configuration File Format
 The project uses a config.txt file located in the root directory. It follows a key-value pair format:
