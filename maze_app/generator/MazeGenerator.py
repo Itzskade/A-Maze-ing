@@ -367,4 +367,3 @@ class MazeGenerator:
                     self.pattern42_coords.add((f, c))
                     visited.add((f, c))
                 return
-
