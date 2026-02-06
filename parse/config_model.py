@@ -4,7 +4,7 @@ try:
     from pydantic import BaseModel, Field, model_validator
 except ImportError:
     sys.stderr.write("\033[91mError: Pydantic not found:\n"
-                     "Install -> Make install\033[0m\n")
+                     "Installation -> make install\033[0m\n")
     sys.exit(1)
 
 
